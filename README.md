@@ -87,7 +87,7 @@ Output is:
 ```console
 L = 6
 Npar = 1000 * 4^(2) = 16000
-===== Gflops/s for FMM = 4.893305e-01 =====
+===== Gflop/s for FMM = 4.893305e-01 =====
 ===== Gflop/s for Direct = 7.389793e-01 =====
 ===== Max potential difference = 4.957777e-06 =====
 ===== Total FMM vs. direct energies & error = -1.101546e+05 -1.101546e+05 -2.603903e-08 =====
