@@ -28,7 +28,6 @@ int main(int argc, char **argv)
 
     g_flops = number_of_flops / tfmm / pow(10, 9);
 
-    // TODO(nikola): Change this!
     printf("===== Gflops/s for FMM = %e =====\n", g_flops);
     number_of_flops = 0;
 
@@ -39,7 +38,6 @@ int main(int argc, char **argv)
     tdirect = (t4 - t3) / (double)CLOCKS_PER_SEC;
     g_flops = number_of_flops / tdirect / pow(10, 9);
 
-    // TODO(nikola): Change this!
     printf("===== Gflop/s for Direct = %e =====\n", g_flops);
     number_of_flops = 0;
 
