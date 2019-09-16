@@ -30,22 +30,18 @@ Npar = 1000 * 4^(3) = 64000
 ===== FMM & direct CPU times = 1.014456e+00 2.635400e-02 =====
 ```
 
-### Plot for FMM
+### Plots
 ![Plot of FMM](plots/1a_plot_fmm.jpg)
-
-### Plot for Direct
 ![Plot of Direct](plots/1a_plot_direct.jpg)
 
-### The fitting parametars values
+### The Fitting Parametars Values
 |   |FMM|Direct|
 |---|---|---|
 |**p**| 0.9153 | 0.03798 |
 |**C**| 4.037e-05 | -0.03664 |
 
-### Fitted Plot for FMM
+### Fitted Plots
 ![Plot of FMM](plots/1a_fit_fmm.jpg)
-
-### Fitted Plot for Direct
 ![Plot of Direct](plots/1a_fit_direct.jpg)
 
 ### Explaination
