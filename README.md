@@ -38,3 +38,14 @@ Npar = 1000 * 4^(3) = 64000
 ### Plot for Direct
 ![Plot of Direct](plots/1a_plot_direct.jpg)
 
+### The fitting parametars values
+|   |*FMM*|*Direct   |
+|---|---|---|
+|*p*| 0.9153 | 0.03798 |
+|*C*| 4.037e-05 | -0.03664 |
+
+### Fitted Plot for FMM
+![Plot of FMM](plots/1a_fit_fmm.jpg)
+
+### Fitted Plot for Direct
+![Plot of Direct](plots/1a_fit_direct.jpg)
