@@ -44,7 +44,7 @@ Npar = 1000 * 4^(3) = 64000
 ![Plot of FMM](plots/1a_fit_fmm.jpg)
 ![Plot of Direct](plots/1a_fit_direct.jpg)
 
-### Explaination
+### Explanation
 
     TODO(nikola):
 
