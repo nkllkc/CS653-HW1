@@ -125,6 +125,7 @@ void mp_leaf()
 
             cadd(1.0, phi[c][a], -1.0 / a, qz, phi[c][a]);
             /* Done internally. */
+            number_of_flops += 1;
         }
     }
 }
@@ -177,6 +178,7 @@ void upward()
     
                         cadd(1.0, phi[c][a], -1.0 / a, pz, phi[c][a]);
                         /* Done internally. */
+                        number_of_flops += 1;
         
                         for (g = 0; g <= a - 1; g++)
                         {
@@ -315,6 +317,7 @@ void downward()
 
                             cadd(1.0, psi[c][a], -1.0 / a, w, psi[c][a]);
                             /* Done internally.  */
+                            number_of_flops += 1;
 
                             cini(0.0, 0.0, w0);
                             cini(1.0, 0.0, zib);
