@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 
     g_flops = number_of_flops / tfmm / pow(10, 9);
 
-    printf("===== Gflops/s for FMM = %e =====\n", g_flops);
+    printf("===== Gflop/s for FMM = %e =====\n", g_flops);
     number_of_flops = 0;
 
     t3 = clock();
