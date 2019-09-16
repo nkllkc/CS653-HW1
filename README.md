@@ -2,11 +2,7 @@
 
 ## 1. Computational complexity
 
-### Plot for FMM
-![Plot of FMM](1a_plot_fmm.jpg)
-
-### Plot for Direct
-![Plot of Direct](1a_plot_direct.jpg)
+Output of running the _fmm2d.c_:
 
 ```console
 
@@ -35,3 +31,10 @@ Npar = 1000 * 4^(3) = 64000
 ===== FMM & direct CPU times = 1.014456e+00 2.635400e-02 =====
 
 ```
+
+### Plot for FMM
+![Plot of FMM](plots/1a_plot_fmm.jpg)
+
+### Plot for Direct
+![Plot of Direct](plots/1a_plot_direct.jpg)
+
