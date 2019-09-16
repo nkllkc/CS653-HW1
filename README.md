@@ -44,6 +44,37 @@ Npar = 1000 * 4^(3) = 64000
 ![Plot of FMM](plots/1a_fit_fmm.jpg)
 ![Plot of Direct](plots/1a_fit_direct.jpg)
 
+### Output of MATLAB's Fitting Tool
+
+```console
+Fit for FMM:
+    General model:
+     f(x) = c*power(x,p)
+     Coefficients (with 95% confidence bounds):
+       c =   4.037e-05  (-5.409e-05, 0.0001348)
+       p =      0.9153  (0.7018, 1.129)
+    
+    Goodness of fit:
+      SSE: 0.0009753
+      R-square: 0.9984
+      Adjusted R-square: 0.9976
+      RMSE: 0.02208
+    
+
+Fit for Direct:
+    General model:
+     f(x) = c*power(x,p)
+     Coefficients (with 95% confidence bounds):
+       c =     0.03797  (0.006751, 0.06918)
+       p =     -0.0366  (-0.1285, 0.05531)
+
+    Goodness of fit:
+      SSE: 6.531e-06
+      R-square: 0.5879
+      Adjusted R-square: 0.3819
+      RMSE: 0.001807
+```
+
 ### Explanation
 
     TODO(nikola):
