@@ -1,10 +1,10 @@
 L = 6
 Npar = 1000 * 4^(2) = 16000
-===== Gflops/s for FMM = 4.893305e-01 =====
-===== Gflop/s for Direct = 7.389793e-01 =====
-===== Max potential difference = 4.957777e-06 =====
-===== Total FMM vs. direct energies & error = -1.101546e+05 -1.101546e+05 -2.603903e-08 =====
-===== FMM & direct CPU times = 2.893460e-01 2.704000e-02 =====
+===== Gflop/s for FMM = 1.003135e+00 =====
+===== Gflop/s for Direct = 1.013628e+00 =====
+===== Max potential difference = 5.974920e-06 =====
+===== Total FMM vs. direct energies & error = -2.572551e+07 -2.572551e+07 -4.764055e-09 =====
+===== FMM & direct CPU times = 1.562660e-01 5.050880e+00 =====
 
 Architecture:        x86_64
 CPU op-mode(s):      32-bit, 64-bit

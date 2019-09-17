@@ -2,7 +2,7 @@
 File fmm2d.h is an include file for program fmm2d.c.
 *******************************************************************************/
 #define BOX 1.0         /* Cubic simulation-box size */
-#define Npar 1000       /* # of charged particles */
+#define Npar 16000       /* # of charged particles */
 #define L 6             /* Max level of refinement = quadtree height */
 #define P 6             /* Order of multipole & local expansions */
 #define Max_par 100000  /* Array size for particles */
@@ -16,7 +16,7 @@ File fmm2d.h is an include file for program fmm2d.c.
 
 /* Testing GFlops *************************************************************/
 
-int number_of_flops = 0;
+long long number_of_flops = 0;
 
 /* Variables for timing measurement *******************************************/
 

@@ -9,25 +9,25 @@ L = 4
 Npar = 1000 * 4^(0) = 1000
 ===== Max potential difference = 4.972490e-06 =====
 ===== Total FMM vs. direct energies & error = -1.101546e+05 -1.101546e+05 -2.055468e-08 =====
-===== FMM & direct CPU times = 4.754000e-02 3.081600e-02 =====
+===== FMM & direct CPU times = 9.040000e-03 2.094400e-02 =====
 
 L = 5
 Npar = 1000 * 4^(1) = 4000
-===== Max potential difference = 4.960206e-06 =====
-===== Total FMM vs. direct energies & error = -1.101546e+05 -1.101546e+05 -2.738719e-08 =====
-===== FMM & direct CPU times = 9.298200e-02 2.616900e-02 =====
+===== Max potential difference = 4.728141e-06 =====
+===== Total FMM vs. direct energies & error = -1.661034e+06 -1.661034e+06 -8.392316e-09 =====
+===== FMM & direct CPU times = 3.308400e-02 3.178300e-01 =====
 
 L = 6
 Npar = 1000 * 4^(2) = 16000
-===== Max potential difference = 4.957777e-06 =====
-===== Total FMM vs. direct energies & error = -1.101546e+05 -1.101546e+05 -2.603903e-08 =====
-===== FMM & direct CPU times = 2.713620e-01 2.614500e-02 =====
+===== Max potential difference = 5.974920e-06 =====
+===== Total FMM vs. direct energies & error = -2.572551e+07 -2.572551e+07 -4.764055e-09 =====
+===== FMM & direct CPU times = 1.202010e-01 4.880406e+00 =====
 
 L = 7
-Npar = 1000 * 4^(3) = 64000
-===== Max potential difference = 4.956997e-06 =====
-===== Total FMM vs. direct energies & error = -1.101546e+05 -1.101546e+05 -2.695153e-08 =====
-===== FMM & direct CPU times = 1.014456e+00 2.635400e-02 =====
+Npar = 1000 * 4^(3) = 64000 
+===== Max potential difference = 5.733392e-06 =====
+===== Total FMM vs. direct energies & error = -4.168857e+08 -4.168857e+08 -1.094234e-08 =====
+===== FMM & direct CPU times = 4.922680e-01 7.803984e+01 =====
 ```
 
 ### Plots
@@ -37,8 +37,8 @@ Npar = 1000 * 4^(3) = 64000
 ### The Fitting Parametars Values
 |   |FMM|Direct|
 |---|---|---|
-|**p**| 0.9153 | 0.03798 |
-|**C**| 4.037e-05 | -0.03664 |
+|**p**| 1.006 | 1.999 |
+|**C**| 7.157e-06 | 1.92e-08 |
 
 ### Fitted Plots
 ![Plot of FMM](plots/1a_fit_fmm.jpg)
@@ -46,52 +46,54 @@ Npar = 1000 * 4^(3) = 64000
 
 ### Output of MATLAB's Fitting Tool
 
+
+#### Fit for FMM:
 ```console
-Fit for FMM:
-    General model:
+General model:
      f(x) = c*power(x,p)
-     Coefficients (with 95% confidence bounds):
-       c =   4.037e-05  (-5.409e-05, 0.0001348)
-       p =      0.9153  (0.7018, 1.129)
-    
-    Goodness of fit:
-      SSE: 0.0009753
-      R-square: 0.9984
-      Adjusted R-square: 0.9976
-      RMSE: 0.02208
-    
+Coefficients (with 95% confidence bounds):
+       c =   7.157e-06  (2.39e-06, 1.192e-05)
+       p =       1.006  (0.9458, 1.067)
 
-Fit for Direct:
-    General model:
+Goodness of fit:
+  SSE: 1.368e-05
+  R-square: 0.9999
+  Adjusted R-square: 0.9999
+  RMSE: 0.002616    
+```
+
+#### Fit for Direct:
+```console
+General model:
      f(x) = c*power(x,p)
-     Coefficients (with 95% confidence bounds):
-       c =     0.03797  (0.006751, 0.06918)
-       p =     -0.0366  (-0.1285, 0.05531)
+Coefficients (with 95% confidence bounds):
+       c =    1.92e-08  (1.8e-08, 2.04e-08)
+       p =       1.999  (1.994, 2.005)
 
-    Goodness of fit:
-      SSE: 6.531e-06
-      R-square: 0.5879
-      Adjusted R-square: 0.3819
-      RMSE: 0.001807
+Goodness of fit:
+  SSE: 0.0001603
+  R-square: 1
+  Adjusted R-square: 1
+  RMSE: 0.008953
 ```
 
 ### Explanation
 
-    TODO(nikola):
+The conclusion from comparing *p* values of FMM and direct method, we see that FMM has linear complexity - O(N), whereas direct method has quadratic complexity - O(N^2).
 
 ##  2. Flop/s Performance
 
-The modified source code is [here](src/fmm2d.c).
+The modified source code is [here](src/fmm2d_mod.c).
 
 Output is:
 ```console
 L = 6
 Npar = 1000 * 4^(2) = 16000
-===== Gflop/s for FMM = 4.893305e-01 =====
-===== Gflop/s for Direct = 7.389793e-01 =====
-===== Max potential difference = 4.957777e-06 =====
-===== Total FMM vs. direct energies & error = -1.101546e+05 -1.101546e+05 -2.603903e-08 =====
-===== FMM & direct CPU times = 2.893460e-01 2.704000e-02 =====
+===== Gflop/s for FMM = 1.003135e+00 =====
+===== Gflop/s for Direct = 1.013628e+00 =====
+===== Max potential difference = 5.974920e-06 =====
+===== Total FMM vs. direct energies & error = -2.572551e+07 -2.572551e+07 -4.764055e-09 =====
+===== FMM & direct CPU times = 1.562660e-01 5.050880e+00 =====
 ```
 
 The machine information:

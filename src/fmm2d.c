@@ -29,6 +29,7 @@ int main(int argc, char **argv)
     g_flops = number_of_flops / tfmm / pow(10, 9);
 
     printf("===== Gflop/s for FMM = %e =====\n", g_flops);
+    // printf("===== Num of flops for FMM = %d =====\n", number_of_flops);
     number_of_flops = 0;
 
     t3 = clock();
@@ -39,6 +40,7 @@ int main(int argc, char **argv)
     g_flops = number_of_flops / tdirect / pow(10, 9);
 
     printf("===== Gflop/s for Direct = %e =====\n", g_flops);
+    // printf("===== Num of flops for Direct = %d =====\n", number_of_flops);
     number_of_flops = 0;
 
     for (j = 0; j < Npar; j++)
