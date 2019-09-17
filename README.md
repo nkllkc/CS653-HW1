@@ -83,7 +83,7 @@ The conclusion from comparing *p* values of FMM and direct method, we see that F
 
 ##  2. Flop/s Performance
 
-The modified source code is [here](src/fmm2d_mod.c).
+The modified source code is [here](src/fmm2d.c).
 
 Output is:
 ```console
